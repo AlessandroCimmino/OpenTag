@@ -1,0 +1,83 @@
+{
+  "BERT_MODEL": "models/model_bert.h5",
+  "GLOVE_MODEL": "models/model.h5",
+  "PRETRAINED_MODEL": "bert/pretrained_models/english",
+  "GLOVE_WORD_EMBD": "persistent_files/glove.6B.100d.txt",
+  "DATA_ROOT": "training_files",
+  "DIRECTORY_DATASET": "benchmark/2013_camera_dataset/",
+  "DIZIONARIO": "dizionario.pkl",
+  "DATASETS": [
+    "train",
+    "valid",
+    "test"
+  ],
+  "ATTRIBUTES": [
+    "sensor_type"
+  ],
+  "SOURCES": {
+    "valid": [
+      "www.mypriceindia.com",
+      "www.walmart.com",
+      "www.wexphotographic.com",
+      "buy.net"
+    ],
+    "train": [
+      "www.buzzillions.com",
+      "www.price-hunt.com",
+      "www.pricedekho.com",
+      "www.canon-europe.com"
+    ],
+    "test": "www.canon-europe.com"
+  },
+  "SPECIFIC_ATTRIBUTES": [],
+  "TAGS": {
+    "O": 0,
+    "B-auto_focus_mode": 1,
+    "I-auto_focus_mode": 2,
+    "B-image_format": 3,
+    "I-image_format": 4,
+    "B-zoom_digital": 5,
+    "I-zoom_digital": 6,
+    "B-camera_type": 7,
+    "I-camera_type": 8,
+    "B-white_balance": 9,
+    "I-white_balance": 10,
+    "B-red_eye_reduction": 11,
+    "I-red_eye_reduction": 12,
+    "B-battery_type": 13,
+    "I-battery_type": 14,
+    "B-battery_chemistry": 15,
+    "I-battery_chemistry": 16,
+    "B-camera_height": 17,
+    "I-camera_height": 18,
+    "B-focal_length_max": 19,
+    "I-focal_length_max": 20,
+    "B-brand":21,
+    "I-brand":22,
+    "B-supported_languages":23,
+    "I-supported_languages":24,
+    "B-focal_length_min": 25,
+    "I-focal_length_min": 26,
+    "B-screen_size":27,
+    "I-screen_size":28,
+    "B-sensor_type":29,
+    "I-sensor_type":30,
+    "B-sensor_size":31,
+    "I-sensor_size":32
+  },
+  "BATCH_SIZE": 32,
+  "EPOCHS": 20,
+  "train": 0.6,
+  "valid": 0.3,
+  "test": 0.1,
+  "ESPERIMENTO": 66,
+  "TEST_SET":"test_set.txt",
+  "NEW_BERT_EMBD": true,
+  "NEW_TRAINING": true,
+  "CREATE_DICTIONARY": false,
+  "CREATE_TRAINING": false,
+  "ALL_SOURCES": true,
+  "SOURCES_TAGGED": false,
+  "DISJOINT":true,
+  "RAF":true
+}
