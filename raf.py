@@ -25,7 +25,7 @@ def create_training_raf():
         name = name.replace(" ","_")
         train_a,train_n = atomic[:math.floor(len(atomic)*(config["train"]+config["valid"]))],non_atomic[:math.floor(len(non_atomic)*(config["train"]+config["valid"]))]
         test_a,test_n = atomic[math.floor(len(atomic)*(config["train"]+config["valid"])):],non_atomic[math.floor(len(non_atomic)*(config["train"]+config["valid"])):]
-        #d.raf_dict(name,train_a)
+        d.raf_dict(name,train_a)
         for s in train_a+train_n:
             source,attribute= s.split("__")[0],s.split("__")[1]
             _,attribute_name = attribute.split("/")

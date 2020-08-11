@@ -146,4 +146,4 @@ def get_predicate_name(attribute,source,multi_predicate=False):
         return ["Not found"]
 
 #to_json("dizionario.pkl")
-to_pkl()
+#to_pkl()
