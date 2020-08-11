@@ -70,14 +70,13 @@
   "train": 0.6,
   "valid": 0.3,
   "test": 0.1,
-  "ESPERIMENTO": 66,
+  "ESPERIMENTO": 1,
   "TEST_SET":"test_set.txt",
-  "NEW_BERT_EMBD": true,
-  "NEW_TRAINING": true,
+  "RAF":true,
   "CREATE_DICTIONARY": false,
   "CREATE_TRAINING": false,
+  "NEW_BERT_EMBD": true,
+  "NEW_TRAINING": true,
   "ALL_SOURCES": true,
-  "SOURCES_TAGGED": false,
-  "DISJOINT":true,
-  "RAF":true
+  "DISJOINT":true
 }

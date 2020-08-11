@@ -14,15 +14,17 @@ with open("config.json") as c:
     config=json.load(c)
 
 
-if config["CREATE_DICTIONARY"]:
-    p.create_values_dictionary()
-if config["CREATE_TRAINING"]:
-    if config["ALL_SOURCES"]:
-        p.create_all()
-    else:
-        p.choosed_sources()
 if config["RAF"]:
-    raf.create_training_raf()
+    raf.create_training_raf():
+else:    
+    if config["CREATE_DICTIONARY"]:
+        p.create_values_dictionary()
+    if config["CREATE_TRAINING"]:
+        if config["ALL_SOURCES"]:
+            p.create_all()
+        else:
+            p.choosed_sources()
+
 
 
 root = config["DATA_ROOT"]

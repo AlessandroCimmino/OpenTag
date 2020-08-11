@@ -320,18 +320,12 @@ def add_false_examples(set,target):
 
 def create_all():
     all_sentences = []
-    if not(config["SOURCES_TAGGED"]):
-        all_sentences=tag_sources()
-    else:
-        with open("all_sentences.txt","wb") as f:
-            pickle.dump(all_sentences,f)
-    #random.shuffle(all_sentences)
+    all_sentences=tag_sources()
     if not(config["DISJOINT"]):
         not_disjoin_set(all_sentences)
     else:
         disjoint_set(all_sentences)
-        #add_false_examples("train","color")
-        #print("False examples finished")
+        
 
 
 def get_sentences_from_value(value,sentences):

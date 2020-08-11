@@ -18,16 +18,17 @@ import raf
 with open("config.json") as c:
     config=json.load(c)
 
-
-if config["CREATE_DICTIONARY"]:
-    p.create_values_dictionary()
-if config["CREATE_TRAINING"]:
-    if config["ALL_SOURCES"]:
-        p.create_all()
-    else:
-        p.choosed_sources()
 if config["RAF"]:
-    raf.create_training_raf()
+    raf.create_training_raf():
+else:
+    if config["CREATE_DICTIONARY"]:
+        p.create_values_dictionary()
+    if config["CREATE_TRAINING"]:
+        if config["ALL_SOURCES"]:
+            p.create_all()
+        else:
+            p.choosed_sources()
+
 
 
 numpy.set_printoptions(threshold=50)
@@ -129,8 +130,8 @@ max_seq_len = max(max(map(len,map(methodcaller("split", " "), test_s))),max(map(
 def create_bert_embedding(dataset,sentences):
     print('Calculate BERT embedding for ' + dataset + "....")
     word_dict = bert.get_embd(sentences)
-    #with open("persistent_files/bert_embedding_"+dataset+".txt", "wb") as fp:
-    #    pickle.dump(word_dict, fp)
+    with open("persistent_files/bert_embedding_"+dataset+".txt", "wb") as fp:
+        pickle.dump(word_dict, fp)
     return word_dict
 
 word_embedding_t,word_embedding_v,word_embedding_test,tokens_test = [],[],[],[]
