@@ -9,14 +9,15 @@ import pre_tagging as p
 import bert
 import json
 import utils
+import raf
 
 with open("config.json") as c:
     config=json.load(c)
 
 
 if config["RAF"]:
-    raf.create_training_raf():
-else:    
+    raf.create_training_raf()
+else:
     if config["CREATE_DICTIONARY"]:
         p.create_values_dictionary()
     if config["CREATE_TRAINING"]:

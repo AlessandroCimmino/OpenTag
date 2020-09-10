@@ -25,12 +25,12 @@ def tokenizer(sentence):
     return nltk.word_tokenize(sentence)
 
 def new_file(set):
-    with open("dataset/"+set+"_set.txt","a") as f:
+    with open("training_files/"+set+"_set.txt","a") as f:
         f.truncate(0)
         f.write("-DOCSTART-	-X-	-X-	O\n\n")
 
 def write(set,sentences):
-    with open("dataset/"+set+"_set.txt","a") as f:
+    with open("training_files/"+set+"_set.txt","a") as f:
         for attr,sentence in sentences:
             for (token,tag) in sentence:
                 f.write(token+"\t"+tag+"\n")
