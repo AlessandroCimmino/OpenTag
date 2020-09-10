@@ -11,7 +11,7 @@ Scaricare il modello pre addestrato di BERT e modificare la voce "PRETRAINED_MOD
 del file config.
 
 ## Esecuzione
-Per decide se utilizzare il modello con GloVe o BERT basta eseguire opentag_bert.py o opentag_glove.py
+Per decidere se utilizzare il modello con GloVe o BERT basta eseguire opentag_bert.py o opentag_glove.py
 
 Prima di eseguire bisogna modificare alcuni voci del file config:
 
